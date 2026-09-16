@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevZoop - Full Stack Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/css/glide.core.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/css/glide.theme.min.css">
+    <link rel="stylesheet" href="style.css?v=1.4.1">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">Dev<span>Zoop</span></div>
+            <nav>
+                <div class="checkbtn" onclick="toggleMenu()">
+                    <i class="fas fa-bars" id="menuIcon" style=""></i>
+                </div>
+                <ul class="nav-list" id="navList">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <span class="label">👋 Welcome to my portfolio</span>
+                <h1>Hi, I'm <span>DevZoop</span><br>Full Stack Developer</h1>
+                <p>I build modern web applications with clean code and beautiful design. Transforming ideas into digital experiences.</p>
+                <div class="hero-buttons">
+                    <a href="#portfolio" class="btn btn-primary">View My Work <i class="fas fa-arrow-right"></i></a>
+                    <a href="#contact" class="btn btn-outline">Let's Talk <i class="fas fa-message"></i></a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="./me.jpg" alt="DevZoop">
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="section-header">
+            <span class="section-label">ABOUT ME</span>
+            <h2>Building Digital Solutions</h2>
+            <p class="section-description">Passionate developer with expertise in creating responsive, user-friendly web applications</p>
+        </div>
+        <div class="about-content">
+            <div class="about-text">
+                <p>I'm a full-stack developer specializing in modern web technologies. With a strong foundation in both front-end and back-end development, I create seamless digital experiences that users love.</p>
+                <p>My approach combines technical expertise with creative problem-solving to deliver solutions that not only look great but perform exceptionally.</p>
+                <div class="stats">
+                    <div class="stat-item">
+                        <h3>5+</h3>
+                        <p>Years Experience</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>50+</h3>
+                        <p>Projects Completed</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>30+</h3>
+                        <p>Happy Clients</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>100%</h3>
+                        <p>Satisfaction Rate</p>
+                    </div>
+                </div>
+            </div>
+            <div class="skills-section">
+                <h3 class="skills-title">Technical Skills</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <i class="fab fa-html5"></i>
+                        <span>HTML5</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-css3-alt"></i>
+                        <span>CSS3</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-js"></i>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-php"></i>
+                        <span>PHP</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-database"></i>
+                        <span>Database</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>Responsive</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <div class="section-header">
+            <span class="section-label">PORTFOLIO</span>
+            <h2>Featured Projects</h2>
+            <p class="section-description">Check out some of my recent work and successful projects</p>
+        </div>
+        <div class="portfolio-grid">
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="./SONALI CHICKEN.png" alt="Sonali Chicken">
+                </div>
+                <div class="project-info">
+                    <h3>Sonali Chicken</h3>
+                    <p>E-commerce platform for a meat shop in Bhubaneswar with online ordering and inventory management.</p>
+                    <a href="https://www.sonalichicken.com/" target="_blank" class="project-link">
+                        View Project <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="./bus.png" alt="Bus Management">
+                </div>
+                <div class="project-info">
+                    <h3>Bus Management System</h3>
+                    <p>Smart system for managing school buses and tracking student attendance in real-time.</p>
+                    <a href="https://github.com/developer-rahul-mandal/busattendance" target="_blank" class="project-link">
+                        View Project <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://smsbomberz.in/assets/img/sms-logo.svg" alt="SMS Bomberz">
+                </div>
+                <div class="project-info">
+                    <h3>SMS Bomberz</h3>
+                    <p>Entertainment tool website with modern interface and engaging user experience.</p>
+                    <a href="https://smsbomberz.in/" target="_blank" class="project-link">
+                        View Project <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://nextbombpro.in/img/thumbnail.jpg" alt="Nextbomb Pro">
+                </div>
+                <div class="project-info">
+                    <h3>Nextbomb Pro</h3>
+                    <p>Premium version tool with advanced features for entertainment enthusiasts.</p>
+                    <a href="https://nextbombpro.in/" target="_blank" class="project-link">
+                        View Project <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="./whois.jpg" alt="WHOIS Checker">
+                </div>
+                <div class="project-info">
+                    <h3>WHOIS Checker Bot</h3>
+                    <p>Telegram bot providing instant WHOIS lookup results for domain verification.</p>
+                    <a href="https://telegram.me/WHOISCheckerRobot" target="_blank" class="project-link">
+                        View Project <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="section-header">
+            <span class="section-label">SERVICES</span>
+            <h2>What I Offer</h2>
+            <p class="section-description">Comprehensive web development services tailored to your needs</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3>Web Development</h3>
+                <p>Building responsive, fast websites using modern technologies and best practices.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-paint-brush"></i>
+                </div>
+                <h3>UI/UX Design</h3>
+                <p>Creating beautiful, user-friendly interfaces that enhance engagement.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+                <h3>SEO Optimization</h3>
+                <p>Improving search engine visibility to drive organic traffic to your site.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3>Responsive Design</h3>
+                <p>Ensuring seamless experience across all devices and screen sizes.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-cogs"></i>
+                </div>
+                <h3>Maintenance & Support</h3>
+                <p>Ongoing technical support and updates to keep your site running smoothly.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <h3>Performance Optimization</h3>
+                <p>Enhancing speed and performance for lightning-fast load times.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <div class="section-header">
+            <span class="section-label">TESTIMONIALS</span>
+            <h2>What Clients Say</h2>
+            <p class="section-description">Feedback from clients I've had the pleasure to work with</p>
+        </div>
+        <div class="testimonials-slider">
+            <div class="glide">
+                <div class="glide__track" data-glide-el="track">
+                    <ul class="glide__slides">
+                        <li class="glide__slide">
+                            <div class="testimonial">
+                                <p class="testimonial-text">"Exceptional work! The website exceeded our expectations in both design and functionality. Highly professional and responsive throughout the project."</p>
+                                <div class="testimonial-author">
+                                    <div class="author-info">
+                                        <strong>Dr. Devika</strong>
+                                        <span>Healthcare Professional</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="glide__slide">
+                            <div class="testimonial">
+                                <p class="testimonial-text">"Outstanding developer with great attention to detail. Delivered a perfect solution on time and was very helpful with post-launch support."</p>
+                                <div class="testimonial-author">
+                                    <div class="author-info">
+                                        <strong>Sarah Johnson</strong>
+                                        <span>Business Owner</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="glide__slide">
+                            <div class="testimonial">
+                                <p class="testimonial-text">"Working with DevZoop was a pleasure. Clear communication, met deadlines, and the final product was exactly what we envisioned."</p>
+                                <div class="testimonial-author">
+                                    <div class="author-info">
+                                        <strong>Michael Chen</strong>
+                                        <span>Startup Founder</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="glide__slide">
+                            <div class="testimonial">
+                                <p class="testimonial-text">"Incredible technical skills combined with creative vision. The website looks amazing and performs flawlessly. Highly recommend!"</p>
+                                <div class="testimonial-author">
+                                    <div class="author-info">
+                                        <strong>Emma Williams</strong>
+                                        <span>Marketing Director</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="glide__arrows" data-glide-el="controls">
+                    <button class="glide__arrow glide__arrow--left slider-btn" data-glide-dir="<">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="glide__arrow glide__arrow--right slider-btn" data-glide-dir=">">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                <div class="glide__bullets" data-glide-el="controls[nav]">
+                    <button class="glide__bullet" data-glide-dir="=0"></button>
+                    <button class="glide__bullet" data-glide-dir="=1"></button>
+                    <button class="glide__bullet" data-glide-dir="=2"></button>
+                    <button class="glide__bullet" data-glide-dir="=3"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="section-header">
+            <span class="section-label">CONTACT</span>
+            <h2>Let's Work Together</h2>
+            <p class="section-description">Have a project in mind? Let's discuss how I can help bring your ideas to life</p>
+        </div>
+        <form class="contact-form" id="contactForm">
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="John Doe" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="john@example.com" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" placeholder="Tell me about your project..." required></textarea>
+            </div>
+            <button type="submit" class="submit-btn" id="submitBtn">
+                <span id="btnText">Send Message</span>
+                <span id="btnLoader" style="display: none;">Sending...</span>
+            </button>
+            <div id="formMessage" style="display: none;"></div>
+        </form>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="logo">Dev<span style="color: var(--accent);">Zoop</span></div>
+            <div class="social-links">
+                <a href="https://github.com/developer-rahul-mandal" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/developer-rahul-mandal" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://x.com/devzoop_rahul" target="_blank" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+            <p style="margin-top: 20px; color: rgba(255,255,255,0.6);">&copy; 2024-25 DevZoop. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/glide.min.js"></script>
+    <script src="script.js?v=1.6"></script>
+</body>
+</html>
