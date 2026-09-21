@@ -1,6 +1,5 @@
 /* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Syne+Tactile&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap');
 
 /* veriables */
 :root {
@@ -38,6 +37,9 @@ html::-webkit-scrollbar{
 
 button, a {
     cursor: pointer;
+}
+a {
+    text-decoration: none;
 }
 
 /* header */
@@ -79,7 +81,6 @@ nav>ul>li {
 }
 
 nav>ul>li>a {
-    text-decoration: none;
     color: var(--text-black);
 }
 
@@ -117,8 +118,6 @@ main {
     z-index: 2;
     overflow: hidden;
 }
-
-#hero_text {}
 
 #hero_text>p:nth-child(1),
 #hero_text>p:nth-child(3),
@@ -283,6 +282,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 3rem 0 0;
 }
 #work>.top>h3 {
     font-size: 3rem;
@@ -290,11 +290,153 @@ main {
 }
 
 #work>.top>p {
-    font-family: "Syne Tactile", system-ui;
+    font-family: "Josefin Slab", serif;
     font-size: smaller;
 }
 
+#projects{
+    margin-top: 3rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
 
+.project{
+    height: 300px;
+    border-radius: .6rem;
+    padding: 2rem;
+    font-family: "Inter", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.project .aboutwork{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 50%;
+}
+
+.project .aboutwork>.workdetails {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: .5rem;
+}
+
+.project .aboutwork>.workdetails>.counter {
+    border: 1px solid;
+    padding: 8px;
+    border-radius: 8px;
+    
+}
+.project .aboutwork>.workdetails>.title {
+    font-size: 2.4rem;
+}
+.project .aboutwork>.workdetails>.description {
+    font-family: "Josefin Slab", serif;
+
+}
+.project .aboutwork>.workdetails>.btn-redirect {
+    border: 2px solid;
+    padding: 5px 20px;
+    border-radius: .3rem;
+    /* font-family: "Josefin Slab", serif; */
+    font-weight: 600;
+}
+.project .aboutwork>.workdetails>.btn-redirect>i {
+    border: 1px solid;
+    border-radius: 50%;
+    /* font-family: "Josefin Slab", serif; */
+    font-weight: 600;
+}
+.project .aboutwork>.techstack> ul{
+    list-style-type: none;
+    display: flex;
+    gap: 10px;
+}
+
+.project .workimage{
+    height: 100%;
+    width: 360px;
+    border-radius: .8rem;
+    background-repeat: no-repeat;
+    background-size: auto 150px;
+    background-position: center;
+}
+.project:nth-child(1) .workimage{
+    background-image: url(../img/bus.png);
+}
+.project:nth-child(2) .workimage{
+    background-image: url(../img/sonali-chicken.png);
+}
+.project:nth-child(3) .workimage{
+    background-image: url(../img/whois-removebg.png);
+}
+
+.project:nth-child(2n) {
+    background-color: var(--bg-orange);
+    color: var(--text-black);
+    flex-direction: row-reverse;
+}
+.project:nth-child(2n) .aboutwork>.workdetails>.btn-redirect{
+    background-color: var(--btn-bg-black);
+    border-color: var(--text-black);
+    color: var(--text-white);
+}
+
+.project:nth-child(2n) .workimage {
+    background-color: var(--bg-project-1);
+}
+
+.project:nth-child(2n-1) {
+    background-color: var(--btn-bg-black);
+    color: var(--text-white);
+}
+.project:nth-child(2n-1) .workimage{
+    background-color: var(--bg-project-2);
+}
+.project:nth-child(2n-1) .aboutwork>.workdetails>.counter{
+    color: var(--text-green);
+    border-color: var(--text-green);
+}
+.project:nth-child(2n-1) .aboutwork>.workdetails>.btn-redirect{
+    color: var(--text-black);
+    background-color: var(--text-white);
+    border-color: var(--text-white);
+}
+.project:nth-child(2n-1) .aboutwork>.techstack{
+    color: var(--text-green);
+    border-color: var(--text-green);
+}
+
+#viewmorework{
+    padding: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#viewmorework h5 {
+    font-family: "Josefin Slab", serif;
+    font-size: 28px;
+    max-width: 35%;
+}
+
+#viewmorework a {
+    background: var(--btn-bg-black);
+    color: var(--text-white);
+    padding: 1rem 3rem;
+    border-radius: 30px;
+    font-size: small;
+    text-transform: uppercase;
+    font-weight: 800;
+    border: none;
+}
 
 @keyframes expandFromRight {
   from {
