@@ -532,7 +532,33 @@ main {
 
 #devBlog {
   padding-top: 4rem;
+  width: 100%;
 }
+
+#devBlog .devbnotes {
+  padding-top: 3rem;
+}
+#devBlog .devbnotes .blog hr{
+  width: 100%;
+  margin-bottom: 0;
+}
+#devBlog .devbnotes .blog .blogData{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 10vw;
+  padding: 15px 0;
+}
+#devBlog .devbnotes .blog .blogData .blogCount{
+  font-size: 13px;
+}
+#devBlog .devbnotes .blog .blogData .blogTitle{
+
+}
+
+
+
 @keyframes expandFromRight {
   from {
     transform: scaleX(0);
