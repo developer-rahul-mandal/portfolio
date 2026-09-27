@@ -1,0 +1,35 @@
+name: Portfolio CI
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  validate:
+    name: Validate Portfolio
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Check PHP files
+        run: |
+          if find . -name "*.php" -print -quit | grep -q .; then
+            echo "PHP files found. Checking syntax..."
+
+            find . -name "*.php" -print0 | while IFS= read -r -d '' file; do
+              php -l "$file"
+            done
+          else
+            echo "No PHP files found. Skipping PHP syntax check."
+          fi
+
+      - name: Check HTML
+        run: |
+          test -f index.html
+          echo "index.html exists."
+
+      - name: CI passed
+        run: echo "All checks passed successfully!"
