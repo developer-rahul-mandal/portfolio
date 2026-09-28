@@ -4,9 +4,9 @@
 /* veriables */
 :root {
   --main-bg: #ede8db;
-  --bg-orange: #ff5c1f;
+  --bg-orange: #ff5c1fde;
   --bg-project-1: #dbd6c9;
-  --bg-project-2: #171a1c;
+  --bg-project-2: #171a1cde;
   --btn-bg-black: #09090a;
   --btn-bg-green: #b8ff2e;
   --text-black: #09090a;
@@ -120,12 +120,16 @@ nav > ul > li > a {
   color: var(--text-black);
 }
 
-nav > button {
+nav > button,
+#contact > .left > button,
+#hero_text > button,
+#viewmorework a,
+#devBlog > .top > a  {
   background: var(--btn-bg-black);
   color: var(--text-white);
   padding: 8px 3rem;
-  border: 2px solid var(--text-white);
   border-radius: 30px;
+  border: none;
   font-size: large;
 }
 
@@ -139,7 +143,6 @@ hr {
 
 main {
   width: 90%;
-  height: 100%;
   margin: auto;
   position: relative;
 }
@@ -198,10 +201,6 @@ main {
 
 #hero_text > button {
   margin: 2rem 0;
-  background: var(--btn-bg-black);
-  color: var(--text-white);
-  padding: 1rem 3rem;
-  border-radius: 30px;
   font-size: small;
   text-transform: uppercase;
   font-weight: 800;
@@ -276,6 +275,7 @@ main {
   width: 100%;
   height: 5.5rem;
   background: var(--bg-project-2);
+  backdrop-filter: blur(5px);
   z-index: 2;
   position: relative;
   border-radius: 5px;
@@ -318,7 +318,8 @@ main {
 #about > h2,
 #myCurrentSkils > h4,
 #whatIAmLearning > h4,
-#devBlog > h2 {
+#devBlog > h2,
+footer > h2 {
   font-size: 0.8rem;
   color: var(--text-orange);
   font-weight: 600;
@@ -339,7 +340,8 @@ main {
 }
 #work > .top > h3,
 .aboutMe > h3,
-#devBlog > .top > h3 {
+#devBlog > .top > h3,
+#contact > .left > h3 {
   font-size: 3rem;
   font-family: "Inter", sans-serif;
 }
@@ -436,6 +438,7 @@ main {
 
 .project:nth-child(2n) {
   background-color: var(--bg-orange);
+  backdrop-filter: blur(2px);
   color: var(--text-black);
   flex-direction: row-reverse;
 }
@@ -450,7 +453,8 @@ main {
 }
 
 .project:nth-child(2n-1) {
-  background-color: var(--btn-bg-black);
+  background-color: var(--bg-project-2);
+  backdrop-filter: blur(5px);
   color: var(--text-white);
 }
 .project:nth-child(2n-1) .workimage {
@@ -485,10 +489,6 @@ main {
 
 #viewmorework a,
 #devBlog > .top > a {
-  background: var(--btn-bg-black);
-  color: var(--text-white);
-  padding: 1rem 3rem;
-  border-radius: 30px;
   font-size: small;
   text-transform: uppercase;
   font-weight: 800;
@@ -503,7 +503,14 @@ main {
 
 #myCurrentSkils,
 #whatIAmLearning {
+  /* width: 100%; */
+}
+
+#skills {
   width: 100%;
+  display: flex;
+  gap: 10%;
+  flex-wrap: wrap;
 }
 
 .toolsList {
@@ -551,10 +558,86 @@ main {
   padding: 15px 0;
 }
 #devBlog .devbnotes .blog .blogData .blogCount{
-  font-size: 13px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-orange);
 }
 #devBlog .devbnotes .blog .blogData .blogTitle{
+  font-size: clamp(16px,1.5vw,22px);
+  font-weight: 300;
+  color: var(--text-black);
+  font-family: DynaPuff;
+  word-spacing: 1.5;
+}
 
+footer {
+  width: 100%;
+  background-color: #000;
+  color: var(--text-white);
+  padding: 2rem 5% 0;
+}
+
+footer h2 {
+  color: var(--text-green);
+}
+
+#contact {
+  width: 100%;
+  padding: 0 0 2rem 0;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+
+#contact a {
+  color: var(--text-white);
+}
+
+#contact > .left {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: clamp(20px, 3vw, 50px);
+}
+#contact > .left > .cta{
+  background-color: var(--btn-bg-green);
+  color: var(--text-black);
+}
+
+#contact > .right {
+  display: flex;
+  flex-direction: column;
+  min-width: 20%;
+  gap: 2rem;
+}
+
+#contact > .right >a {
+  font-size: 18px;
+  font-family: "Inter", sans-serif;
+}
+
+#contact > .right > .socials {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  font-size: 15px;
+  font-family: "Inter", sans-serif;
+}
+
+footer hr {
+  width: 100%;
+  margin-bottom: 0;
+}
+footer .footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.footer p:nth-last-child(1){
+  font-size: small;
 }
 
 
