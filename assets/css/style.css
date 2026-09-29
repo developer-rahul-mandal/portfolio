@@ -507,11 +507,6 @@ footer > h2 {
   max-width: 400px;
 }
 
-#myCurrentSkils,
-#whatIAmLearning {
-  /* width: 100%; */
-}
-
 #skills {
   width: 100%;
   display: flex;
@@ -717,6 +712,7 @@ footer .footer {
   #hero {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
+    gap: 3rem;
     
   }
 
