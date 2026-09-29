@@ -13,3 +13,13 @@ function moveProgressBar() {
 
   document.getElementById("myProgressBar").style.width = scrolled + "%";
 }
+
+var navBtn = document.querySelector(".navBtn");
+var menu = document.querySelector("nav")
+navBtn.addEventListener("click",()=>{
+  if (menu.classList.contains("active")) {
+    menu.classList.remove("active")
+  } else {
+    menu.classList.add("active")
+  }
+})
