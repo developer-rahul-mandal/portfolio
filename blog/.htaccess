@@ -1,0 +1,17 @@
+# DEVZOOP Blog Apache URL Rewriting
+DirectoryIndex index.php index.html
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # 1. Sitemap XML
+    RewriteRule ^sitemap\.xml$ sitemap.php [L]
+
+    # 2. Existing files and directories serve directly
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+    # 3. Clean article URLs: /blog/{slug} -> post.php?slug={slug}
+    RewriteRule ^([a-zA-Z0-9_-]+)/?$ post.php?slug=$1 [L,QSA]
+</IfModule>

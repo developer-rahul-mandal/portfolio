@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Allow: /blog/
+Allow: /storage/uploads/
+Disallow: /admin/
+Disallow: /install.php
+Disallow: /includes/
+Disallow: /migrations/
+Disallow: /storage/cache/
+
+Sitemap: https://devzoop.in/blog/sitemap.xml

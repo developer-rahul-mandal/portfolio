@@ -1,0 +1,44 @@
+# ═══════════════════════════════════════════════════════════════════
+# DEVZOOP — Git Ignore Configuration
+# ═══════════════════════════════════════════════════════════════════
+
+# Environment & Secret files
+.env
+.env.*
+!.env.example
+
+# Local Database Dumps & Exports
+*.sql.gz
+*.sql.bak
+dump.sql
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+
+# Server lock & temporary cache files
+storage/installed.lock
+storage/cache/**
+!storage/cache/.gitkeep
+
+# User-uploaded files (Keep folder structure & htaccess, ignore contents)
+storage/uploads/*
+!storage/uploads/.htaccess
+!storage/uploads/.gitkeep
+
+# Operating System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE & Editor folders
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Node dependencies & temporary test scripts
+node_modules/
+test-*.php
+test-*.js
