@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog — DEVZOOP | Notes from the Build</title>
+    <meta name="description" content="Developer journal by Rahul Mandal — experiments, debugging sessions, technical decisions, and lessons from building real projects on the web." />
+    <meta name="author" content="Rahul Mandal" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Blog — DEVZOOP | Notes from the Build" />
+    <meta property="og:description" content="Experiments, debugging sessions, technical decisions, and lessons from building real projects on the web." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://devzoop.in/blog" />
+    <meta property="og:image" content="https://devzoop.in/assets/img/rahul-hero.jpg" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Blog — DEVZOOP" />
+    <meta name="twitter:description" content="Notes from the build — a developer journal." />
+
+    <!-- Shared site styles -->
+    <link rel="stylesheet" href="../assets/css/style.css?v=2" />
+    <link href="../assets/remixIcon/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Blog-specific styles -->
+    <link rel="stylesheet" href="blog.css?v=1" />
+</head>
+
+<body>
+
+    <!-- Progress Bar -->
+    <div class="progress-container" aria-hidden="true">
+        <div class="progress-bar" id="myProgressBar"></div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- NAVIGATION (shared with homepage)               -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <header id="site-header">
+        <div class="header-inner">
+            <a href="../" class="logo" aria-label="DEVZOOP Home">
+                <span class="logo-text">DEV<span class="logo-accent">ZOOP</span></span>
+                <span class="logo-dot"></span>
+            </a>
+            <nav id="main-nav" aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><a href="../#work" class="nav-link">Work</a></li>
+                    <li><a href="../#about" class="nav-link">About</a></li>
+                    <li><a href="./" class="nav-link active">Blog</a></li>
+                    <li><a href="../#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <a href="https://github.com/developer-rahul-mandal" target="_blank" rel="noopener noreferrer" class="nav-github" aria-label="GitHub Profile">
+                    <i class="ri-github-fill"></i>
+                    <span>GitHub</span>
+                    <i class="ri-arrow-right-up-line"></i>
+                </a>
+            </nav>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ═══════════════════════════════════════════════ -->
+        <!-- BLOG HERO                                       -->
+        <!-- ═══════════════════════════════════════════════ -->
+        <section class="blog-hero section">
+            <div class="blog-hero-grid" aria-hidden="true"></div>
+            <div class="blog-hero-content">
+                <div class="blog-hero-text">
+                    <span class="section-label">01 / Notes from the Build</span>
+                    <h1 class="blog-hero-headline">
+                        Things I learn<br>
+                        <span class="headline-accent">while building.</span>
+                    </h1>
+                    <p class="blog-hero-description">
+                        Experiments, debugging sessions, technical decisions, and lessons from building real projects on the web.
+                    </p>
+                </div>
+                <div class="blog-hero-meta-panel">
+                    <div class="meta-panel-item">
+                        <span class="meta-panel-label">Author</span>
+                        <div style="display: flex; align-items: center; gap: 8px; margin-top: 4px;">
+                            <img src="../assets/img/rahul-about.jpg" alt="Rahul Mandal" style="width: 22px; height: 22px; border-radius: 50%; object-fit: cover; border: 1px solid var(--c-accent);">
+                            <span class="meta-panel-value" style="font-size: 0.85rem;">Rahul Mandal</span>
+                        </div>
+                    </div>
+                    <div class="meta-panel-divider"></div>
+                    <div class="meta-panel-item">
+                        <span class="meta-panel-label">Type</span>
+                        <span class="meta-panel-value">Developer Journal</span>
+                    </div>
+                    <div class="meta-panel-divider"></div>
+                    <div class="meta-panel-item">
+                        <span class="meta-panel-label">Categories</span>
+                        <div class="meta-panel-tags">
+                            <span class="blog-category blog-category-build">BUILD</span>
+                            <span class="blog-category blog-category-learn">LEARN</span>
+                            <span class="blog-category blog-category-break">BREAK</span>
+                        </div>
+                    </div>
+                    <div class="meta-panel-divider"></div>
+                    <div class="meta-panel-item">
+                        <span class="meta-panel-label">Format</span>
+                        <span class="meta-panel-value">Field Notes</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════ -->
+        <!-- FEATURED ARTICLE                                -->
+        <!-- ═══════════════════════════════════════════════ -->
+        <section class="blog-featured section" id="blog-featured">
+            <!-- Rendered by blog.js -->
+        </section>
+
+        <!-- ═══════════════════════════════════════════════ -->
+        <!-- SEARCH & FILTERS                                -->
+        <!-- ═══════════════════════════════════════════════ -->
+        <section class="blog-controls section" id="blog-controls">
+            <div class="blog-search-wrap">
+                <label for="blog-search" class="sr-only">Search articles</label>
+                <i class="ri-search-line blog-search-icon" aria-hidden="true"></i>
+                <input type="search" id="blog-search" class="blog-search-input" placeholder="Search articles..." autocomplete="off" />
+                <button id="blog-search-clear" class="blog-search-clear" aria-label="Clear search" style="display:none;">
+                    <i class="ri-close-line"></i>
+                </button>
+            </div>
+            <div class="blog-filters" role="tablist" aria-label="Filter articles by category">
+                <button class="blog-filter active" role="tab" aria-selected="true" data-category="ALL NOTES">All Notes</button>
+                <button class="blog-filter" role="tab" aria-selected="false" data-category="BUILD">Build</button>
+                <button class="blog-filter" role="tab" aria-selected="false" data-category="LEARN">Learn</button>
+                <button class="blog-filter" role="tab" aria-selected="false" data-category="BREAK">Break</button>
+                <button class="blog-filter" role="tab" aria-selected="false" data-category="GIT & CI/CD">Git & CI/CD</button>
+            </div>
+            <div class="blog-results-info" id="blog-results-info" aria-live="polite"></div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════ -->
+        <!-- ARTICLES GRID                                   -->
+        <!-- ═══════════════════════════════════════════════ -->
+        <section class="blog-listing section" id="blog-listing" role="tabpanel">
+            <!-- Rendered by blog.js -->
+        </section>
+
+        <!-- ═══════════════════════════════════════════════ -->
+        <!-- EMPTY STATE                                     -->
+        <!-- ═══════════════════════════════════════════════ -->
+        <section class="blog-empty section" id="blog-empty" style="display:none;">
+            <div class="empty-state">
+                <div class="empty-icon" aria-hidden="true">
+                    <i class="ri-search-eye-line"></i>
+                </div>
+                <h3 class="empty-title">No matching notes found</h3>
+                <p class="empty-description">Try a different search term or category filter.</p>
+                <button class="btn btn-outline" id="blog-reset">
+                    <span>Clear Filters</span>
+                    <i class="ri-refresh-line"></i>
+                </button>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════ -->
+        <!-- FOLLOW CTA                                      -->
+        <!-- ═══════════════════════════════════════════════ -->
+        <section class="blog-follow section">
+            <div class="follow-panel">
+                <div class="follow-text">
+                    <h3 class="follow-title">Want to follow along?</h3>
+                    <p class="follow-description">New notes drop as I ship projects and solve problems. Reach out or follow on GitHub to stay in the loop.</p>
+                </div>
+                <div class="follow-actions">
+                    <a href="https://github.com/developer-rahul-mandal" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                        <i class="ri-github-fill"></i>
+                        <span>Follow on GitHub</span>
+                    </a>
+                    <a href="../#contact" class="btn btn-secondary">
+                        <span>Get in Touch</span>
+                        <i class="ri-arrow-right-up-line"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- FOOTER (shared with homepage)                   -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <footer id="site-footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <span class="logo-text">DEV<span class="logo-accent">ZOOP</span></span>
+                <p class="footer-tagline">Building useful things for the web.</p>
+            </div>
+            <nav class="footer-nav" aria-label="Footer navigation">
+                <a href="../#work">Work</a>
+                <a href="../#about">About</a>
+                <a href="./">Blog</a>
+                <a href="../#contact">Contact</a>
+            </nav>
+            <div class="footer-socials">
+                <a href="https://github.com/developer-rahul-mandal" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="ri-github-fill"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="ri-linkedin-box-fill"></i></a>
+                <a href="#" aria-label="Reddit"><i class="ri-reddit-line"></i></a>
+                <a href="#" aria-label="X"><i class="ri-twitter-x-line"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="footer-copy">DEVZOOP &copy; <span id="footer-year"></span></p>
+            <button class="back-to-top" id="backToTop" aria-label="Back to top">
+                <i class="ri-arrow-up-line"></i>
+                <span>Top</span>
+            </button>
+            <p class="footer-signoff">Built with code &amp; coffee. <i class="ri-cup-fill"></i></p>
+        </div>
+    </footer>
+
+    <script src="blog-data.js?v=1"></script>
+    <script src="blog.js?v=1"></script>
+</body>
+
+</html>

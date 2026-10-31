@@ -1,0 +1,43 @@
+# ═══════════════════════════════════════════════════════════════════
+# DEVZOOP Storage Uploads — Strict Execution Lockdown
+# ═══════════════════════════════════════════════════════════════════
+
+# Disable script execution across all PHP versions
+<IfModule mod_php.c>
+    php_flag engine off
+</IfModule>
+<IfModule mod_php7.c>
+    php_flag engine off
+</IfModule>
+<IfModule mod_php8.c>
+    php_flag engine off
+</IfModule>
+
+# Remove any script handlers
+RemoveHandler .php .phtml .php3 .php4 .php5 .php7 .php8 .phps .cgi .pl .asp .aspx .sh .bash .py
+RemoveType .php .phtml .php3 .php4 .php5 .php7 .php8 .phps .cgi .pl .asp .aspx .sh .bash .py
+
+# Disable CGI execution
+Options -ExecCGI -Indexes
+
+# Deny all script execution explicitly
+<FilesMatch "\.(?i:php[0-9]?|phtml|phps|cgi|pl|py|sh|bash|exe|bat|cmd|dll|bin|svg)$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+# Only allow legitimate static image formats
+<FilesMatch "\.(?i:jpe?g|png|webp|gif)$">
+    <IfModule mod_authz_core.c>
+        Require all granted
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Allow from all
+    </IfModule>
+</FilesMatch>
